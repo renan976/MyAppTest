@@ -52,7 +52,7 @@ class CategoryTableViewController: UITableViewController, UITableViewDataSource,
 
         //Agrupa as chaves do dicionário (categorias) em uma Array e ordena seus valores
         
-        var categoryArray = sorted(dicionário.keys.array, >)
+        var categoryArray = sorted(dicionário.keys.array, <)
         
         //Atualiza cada célula com as categorias da Array
         
@@ -84,7 +84,7 @@ class CategoryTableViewController: UITableViewController, UITableViewDataSource,
         
         //Passa para a próxima cena (de perguntas) uma Array contendo todas as perguntas da categoria selecionada
         
-        newVC.questionArray = sorted(dicionário[selectedCategory]!.keys.array, >)
+        newVC.questionArray = sorted(dicionário[selectedCategory]!.keys.array, <)
         newVC.selectedCategory = selectedCategory
        
     }

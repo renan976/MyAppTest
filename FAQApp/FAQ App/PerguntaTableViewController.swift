@@ -10,7 +10,11 @@ import UIKit
 
 class PerguntaTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
+    var filteredResults: [String] = []
+    var isSearching: Bool = false
+
     var questionArray: [String]!
     var selectedQuestion: String!
     var selectedCategory: String!
@@ -24,10 +28,36 @@ class PerguntaTableViewController: UITableViewController, UITableViewDataSource,
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredResults = dicionário[selectedCategory]!.keys.array.filter({
+            
+            //Verifica se existe alguma ocorrência do que foi digitado no searchBar em alguma parte do texto de cada célula
+            
+            (textInCell: String) -> Bool in
+            let matched = textInCell.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return matched != nil
+            
+        })
+        
+        //Se estiver vazio o searchBar significa que não está ocorrendo busca
+        
+        if searchBar.text.isEmpty {
+            isSearching = false
+        } else {
+            isSearching = true
+        }
+        
+        //Atualiza os dados conforme vai sendo digitado ao no searchBar
+        
+        self.tableView.reloadData()
+    
     }
 
     // MARK: - Table view data source
@@ -42,6 +72,14 @@ class PerguntaTableViewController: UITableViewController, UITableViewDataSource,
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         
+        //Se o searchBar não estiver vazio, retorna o total da filtragem.
+        
+        if isSearching {
+            
+            return filteredResults.count
+            
+        }
+        
         //conta as duplas chave:valor do segundo  dicionário (Q:A)
         
         return dicionário[selectedCategory]!.count
@@ -52,11 +90,22 @@ class PerguntaTableViewController: UITableViewController, UITableViewDataSource,
         
         let cell = tableView.dequeueReusableCellWithIdentifier("PerguntaPrototypeCell", forIndexPath: indexPath) as! UITableViewCell
         
+        //Se o searchBar não estiver vazio, carrega no tableView os dados filtrados
+        
+        if isSearching {
+            
+            cell.textLabel?.text = self.filteredResults[indexPath.row]
+            
+        } else {
+        
         //Atualiza as células com as perguntas do Array
 
         cell.textLabel?.text = questionArray[indexPath.row]
+            
+        }
 
         return cell
+        
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

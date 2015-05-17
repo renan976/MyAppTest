@@ -19,5 +19,5 @@ import Foundation
 let dicionário:[String:[String:String]] = ["Dúvidas Swift" : ["Como se declara uma variável?" : "Usando var",
                                                               "Como se declara uma constante? ":"Usando let"],
                                            "Dúvidas Site" : ["Como me registro no site?": "Através desse link: ..."],
-                                           "Dúvidas Administrativas" : ["Quanto tempo tenho acesso ao curso?": "Durante 3 meses"]]
+                                           "Administrativas" : ["Quanto tempo tenho acesso ao curso?": "Durante 3 meses"]]
 

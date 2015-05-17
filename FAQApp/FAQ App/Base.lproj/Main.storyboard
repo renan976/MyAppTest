@@ -12,6 +12,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="xfW-ZM-FK8">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="hb7-gs-VZl" id="l7i-CB-vs6"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryPrototypeCell" id="kuc-FJ-pqA">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -27,6 +35,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Bqs-bI-vMp"/>
                     <connections>
+                        <outlet property="searchBar" destination="xfW-ZM-FK8" id="6Wi-d4-cXc"/>
                         <segue destination="Vdl-41-aAO" kind="show" identifier="CategoryToQuestionSegue" id="XOf-ow-wAx"/>
                     </connections>
                 </tableViewController>
@@ -42,6 +51,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="41s-L2-Xq2">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Vdl-41-aAO" id="qca-aW-OBh"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PerguntaPrototypeCell" id="GKx-kA-NUf">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -56,6 +73,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="searchBar" destination="41s-L2-Xq2" id="8bh-7T-JTy"/>
                         <segue destination="ai3-94-tmB" kind="show" identifier="QuestionToAnswerSegue" id="KTK-gf-ZEq"/>
                     </connections>
                 </tableViewController>

@@ -21,7 +21,10 @@ class PerguntaTableViewController: UITableViewController, UITableViewDataSource,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationItem.title = "Perguntas"
+        self.searchBar.placeholder = "Busque por perguntas"
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -20,6 +20,9 @@ class CategoryTableViewController: UITableViewController, UITableViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Categorias"
+        self.searchBar.placeholder = "Busque por categorias"
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

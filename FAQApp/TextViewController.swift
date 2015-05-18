@@ -20,6 +20,9 @@ class TextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Resposta"
+        
+        
         //Deixa (true) ou não (false) o usuário editar a resposta
         
         textView.editable = false

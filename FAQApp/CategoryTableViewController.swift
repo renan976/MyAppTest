@@ -20,8 +20,14 @@ class CategoryTableViewController: UITableViewController, UITableViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Atualiza a imagem do logo da MobGeek na NavigationBar dos 3 ViewControllers que estão conectados hierarquicamente ao mesmo NavigationController
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "MobGeekLogo.jpg"), forBarMetrics: .Default)
+        
+        
         self.navigationItem.title = "Categorias"
         self.searchBar.placeholder = "Busque por categorias"
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

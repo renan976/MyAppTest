@@ -130,7 +130,7 @@ class PerguntaTableViewController: UITableViewController, UITableViewDataSource,
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         
-        let newVC = segue.destinationViewController as! TextViewController
+        let newVC = segue.destinationViewController as! WebViewController
         
         //Passa para a próxima cena (de resposta) a pergunta selecionada
         

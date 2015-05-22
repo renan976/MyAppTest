@@ -16,8 +16,42 @@ import Foundation
 
 //Cada pergunta tem uma única resposta
 
-let dicionário:[String:[String:String]] = ["Dúvidas Swift" : ["Como se declara uma variável?" : "Usando var",
-                                                              "Como se declara uma constante? ":"Usando let"],
-                                           "Dúvidas Site" : ["Como me registro no site?": "Através desse link: ..."],
-                                           "Administrativas" : ["Quanto tempo tenho acesso ao curso?": "Durante 3 meses"]]
+let dicionário:[String:[String:String]] =
+[
+                                           "Dúvidas Swift" : [
+    
+                                              "Pergunta com arquivo": "QA2",
+                                    "Como se declara uma variável?" : "usando var",
+                            "Como se declara uma constante? ":"Usando let"
+    
+                                                              ],
+    
+                                            "Dúvidas Site" : [
+                                                
+                                  "Como me registro no site?":"Através desse link"
+    
+                                                              ],
+    
+                                         "Administrativas" : [
+                                            
+                        "Quanto tempo tenho acesso ao curso?": "Durante 3 meses"
+    
+                                                              ]
+]
+
+
+//func getRequest(fileName: String) -> NSURLRequest {
+//
+//    return NSURLRequest(URL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(fileName, ofType: "rtf")!)!)
+//
+//}
+
+//Aqui as instâncias dos requests dos arquivos com as respostas já são criadas e depois são apenas usadas pelo webView
+
+//let novoDic:[String:NSURLRequest] = ["QA1": getRequest("QA1"),
+//                                     "QA2": getRequest("QA2")]
+
+
+
+
 

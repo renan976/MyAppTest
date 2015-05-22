@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cNy-u7-VBo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Category Table View Controller-->
@@ -74,7 +76,7 @@
                     </tableView>
                     <connections>
                         <outlet property="searchBar" destination="41s-L2-Xq2" id="8bh-7T-JTy"/>
-                        <segue destination="ai3-94-tmB" kind="show" identifier="QuestionToAnswerSegue" id="KTK-gf-ZEq"/>
+                        <segue destination="qFv-5e-1z4" kind="show" identifier="QuestionToAnswerSegue" id="Sgk-4C-GvP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iee-73-IhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,20 +141,38 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alY-d9-bMh">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="542"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="78" width="400" height="322"/>
                                 </variation>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="alY-d9-bMh" firstAttribute="leading" secondItem="ypS-X2-Xkh" secondAttribute="leadingMargin" id="Thq-p6-dYE"/>
+                            <constraint firstItem="alY-d9-bMh" firstAttribute="trailing" secondItem="ypS-X2-Xkh" secondAttribute="trailingMargin" id="b23-f2-bm5"/>
+                            <constraint firstItem="XXn-bj-onc" firstAttribute="top" secondItem="alY-d9-bMh" secondAttribute="bottom" constant="8" id="njZ-Zz-xGB"/>
+                            <constraint firstItem="alY-d9-bMh" firstAttribute="top" secondItem="TUj-dy-jLL" secondAttribute="bottom" constant="8" id="voJ-0G-5H0"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="alY-d9-bMh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="njZ-Zz-xGB"/>
+                                <exclude reference="Thq-p6-dYE"/>
+                                <exclude reference="b23-f2-bm5"/>
+                                <exclude reference="voJ-0G-5H0"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="alY-d9-bMh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="njZ-Zz-xGB"/>
+                                <include reference="Thq-p6-dYE"/>
+                                <include reference="b23-f2-bm5"/>
+                                <include reference="voJ-0G-5H0"/>
                             </mask>
                         </variation>
                     </view>
@@ -162,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qt0-SI-u50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754" y="1090.5"/>
+            <point key="canvasLocation" x="2724" y="1111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EIe-oo-dOT">

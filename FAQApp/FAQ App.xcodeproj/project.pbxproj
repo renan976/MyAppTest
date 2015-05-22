@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0379AE1B0EB95800A487B5 /* QA2.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EB0379AD1B0EB95800A487B5 /* QA2.rtf */; };
 		EBBBA3E01B06E62A00FE5E79 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBA3DF1B06E62A00FE5E79 /* WebViewController.swift */; };
 		EBBBA3E21B06F92A00FE5E79 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBA3E11B06F92A00FE5E79 /* TextViewController.swift */; };
 		EBBD8C9B1B064B64005E39D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD8C9A1B064B64005E39D4 /* AppDelegate.swift */; };
@@ -17,7 +18,6 @@
 		EBBD8CBB1B064C42005E39D4 /* Modelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD8CBA1B064C42005E39D4 /* Modelo.swift */; };
 		EBBD8CBF1B064D0C005E39D4 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD8CBE1B064D0C005E39D4 /* CategoryTableViewController.swift */; };
 		EBBD8CC11B06506D005E39D4 /* PerguntaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD8CC01B06506D005E39D4 /* PerguntaTableViewController.swift */; };
-		EBC1D7FB1B0D92A70054D7AA /* QA2.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EBC1D7FA1B0D92A70054D7AA /* QA2.rtf */; };
 		EBCA518D1B0C2A7900F1A98C /* MobGeekLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBCA518C1B0C2A7900F1A98C /* MobGeekLogo.jpg */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB0379AD1B0EB95800A487B5 /* QA2.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = QA2.rtf; sourceTree = SOURCE_ROOT; };
 		EBBBA3DF1B06E62A00FE5E79 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EBBBA3E11B06F92A00FE5E79 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = ../TextViewController.swift; sourceTree = "<group>"; };
 		EBBD8C951B064B64005E39D4 /* FAQ App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FAQ App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +47,6 @@
 		EBBD8CBA1B064C42005E39D4 /* Modelo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modelo.swift; sourceTree = "<group>"; };
 		EBBD8CBE1B064D0C005E39D4 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryTableViewController.swift; path = "FAQ App.xcodeproj/../CategoryTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		EBBD8CC01B06506D005E39D4 /* PerguntaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerguntaTableViewController.swift; sourceTree = "<group>"; };
-		EBC1D7FA1B0D92A70054D7AA /* QA2.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = QA2.rtf; path = ../../../QA2.rtf; sourceTree = "<group>"; };
 		EBCA518C1B0C2A7900F1A98C /* MobGeekLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MobGeekLogo.jpg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -89,7 +89,7 @@
 		EBBD8C971B064B64005E39D4 /* FAQ App */ = {
 			isa = PBXGroup;
 			children = (
-				EBC1D7FA1B0D92A70054D7AA /* QA2.rtf */,
+				EB0379AD1B0EB95800A487B5 /* QA2.rtf */,
 				EBCA518C1B0C2A7900F1A98C /* MobGeekLogo.jpg */,
 				EBBBA3E11B06F92A00FE5E79 /* TextViewController.swift */,
 				EBBBA3DF1B06E62A00FE5E79 /* WebViewController.swift */,
@@ -213,7 +213,7 @@
 				EBBD8CA01B064B64005E39D4 /* Main.storyboard in Resources */,
 				EBCA518D1B0C2A7900F1A98C /* MobGeekLogo.jpg in Resources */,
 				EBBD8CA51B064B64005E39D4 /* LaunchScreen.xib in Resources */,
-				EBC1D7FB1B0D92A70054D7AA /* QA2.rtf in Resources */,
+				EB0379AE1B0EB95800A487B5 /* QA2.rtf in Resources */,
 				EBBD8CA21B064B64005E39D4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
